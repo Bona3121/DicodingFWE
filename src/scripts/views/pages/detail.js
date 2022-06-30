@@ -13,8 +13,8 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const restaurants = await RestaurantSource.detailrestaurant(url.id);
-    const restaurantContainer = document.querySelector('#restaurants');
+    const restaurant = await RestaurantSource.detailrestaurant(url.id);
+    const restaurantContainer = document.querySelector('#restaurant');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
     LikeButtonInitiator.init({
