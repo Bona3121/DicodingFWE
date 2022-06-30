@@ -24,4 +24,4 @@ const FavoriteRestaurantIdb = {
   },
 };
  
-export default FavoriteRestaurantIdbIdb;
+export default FavoriteRestaurantIdb;

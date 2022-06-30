@@ -11,10 +11,10 @@ const WebSocketInitiator = {
     const movie = JSON.parse(message.data);
     
     NotificationHelper.sendNotification({
-      title: `${restaurants.name} has arrived in Indonesia!`,
+      title: `${restaurant.name} has arrived in Indonesia!`,
       options: {
         body: restaurants.description,
-        image: `${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}`,
+        image: `${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}`,
       },
     });
   },
