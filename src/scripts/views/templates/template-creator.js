@@ -1,10 +1,10 @@
 import CONFIG from '../../globals/config';
  
-const createRestaurantDetailTemplate = (restaurants) => `
-  <h2 class="restaurants__title">${restaurants.name}</h2>
+const createRestaurantDetailTemplate = (restaurant) => `
+  <h2 class="restaurants__title">${restaurant.name}</h2>
   <img class="restaurants__poster" src="${
-    CONFIG.BASE_IMAGE_URL + restaurants.pictureId
-  }" alt="${restaurants.name}" />
+    CONFIG.BASE_IMAGE_URL + restaurant.pictureId
+  }" alt="${restaurant.name}" />
   <div class="restaurants__info">
   <h3>Information</h3>
     <h4>Address</h4>
@@ -23,7 +23,6 @@ const createRestaurantDetailTemplate = (restaurants) => `
     <p>${restaurant.customerReviews.map(name.join(" | "))}</p>
   <p>${restaurant.customerReviews.map(review.join(" | "))}</p>
   <p>${restaurant.customerReviews.map(date.join(" | "))}</p>
-  </div>
 `;
  
 const createRestaurantItemTemplate = (restaurant) => `
