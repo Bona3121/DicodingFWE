@@ -1,18 +1,21 @@
-import RestaurantSource from '../../data/restaurant-source';
+import FavouriteRestaurantIdb from '../../data/favourite-restaurant-idb';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
  
 const Favourite = {
   async render() {
     return `
       <h1> Favourite Restaurants </h1>
+	  <div id="restaurants" class="restaurants">
+ 
+        </div>
     `;
   },
  
   async afterRender() {
-    const restaurant = await RestaurantSource.listRestaurant();
-    const restaurantContainer = document.querySelector('#restaurant');
-    restaurant.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    const restaurants = await FavouriteRestaurantIdb.getAllRestaurants();
+    const restaurantContainer = document.querySelector('#restaurants');
+    restaurants.forEach((resto) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(resto);
     });
   },
 };
