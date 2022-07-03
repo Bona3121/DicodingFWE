@@ -39,7 +39,7 @@ const LikeButtonInitiator = {
  
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavouriteRestaurantIdb.deleteRestaurant(this._Restaurant.id);
+      await FavouriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
       this._renderButton();
     });
   },

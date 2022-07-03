@@ -23,6 +23,7 @@ const Detail = {
         id: restaurant.id,
         name: restaurant.name,
         description: restaurant.description,
+	    
       },
     });
   },
