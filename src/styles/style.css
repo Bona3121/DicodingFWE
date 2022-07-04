@@ -77,6 +77,22 @@ body {
   width: 100%;
 }
  
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+	height: 75%;
+    text-align: center;
+    background-position: center;
+    background-color: green;
+}
+
+.hero img{
+	 width : 100%; 
+	 height : 100%
+}
+ 
 /*
   Main Content
 */

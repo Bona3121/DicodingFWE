@@ -12,6 +12,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <p>${restaurant.city}</p>
     <h4>Description</h4>
     <p>${restaurant.description}</p>
+	<h4>Kategori Menu :</h4>  <p> ${restaurant.categories.map((category) => category.name).join(', ')}</p>
+    <h4>Makanan :</h4>  <p>${restaurant.menus.foods.map((food) => food.name).join(', ')}</p>
+    <h4>Minuman :</h4> <p> ${restaurant.menus.drinks.map((drink) => drink.name).join(', ')}</p>
+    <h4>Rating Restaurant:</h4>  <p>⭐️${restaurant.rating}</p>
+    <h4>Customer Reviews :</h4>  <p>${restaurant.customerReviews.map((customerReview) => customerReview.review).join(', ')}</p>
   </div>
     
 `;
@@ -24,7 +29,9 @@ const createRestaurantItemTemplate = (restaurant) => `
       
     </div>
     <div class="restaurants-item__content">
+	
      <h3 class="restaurants__name"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
+	  <h4>City : ${restaurant.city}</h4>
       <p>${restaurant.description}</p>
     </div>
   </div>

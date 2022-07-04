@@ -13,6 +13,7 @@ const assetsToCache = [
   './icons/maskable_icon_x384.png',
   './icons/maskable_icon_x512.png',
   './index.html',
+  './images/banner.png',
   './favicon.png',
   './app.bundle.js',
   './app.webmanifest',
