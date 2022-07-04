@@ -39,6 +39,8 @@ body {
   font-size: 18px;
   padding: 8px;
   cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
 }
  
 .app-bar .app-bar__brand {
@@ -75,9 +77,10 @@ body {
   padding: 8px;
   margin-bottom: 5px;
   width: 100%;
+  min-height: 44px;
+  min-width: 44px;
 }
- 
-.hero {
+ .hero {
     display: flex;
     align-items: center;
     min-height: 380px;
@@ -85,7 +88,8 @@ body {
 	height: 75%;
     text-align: center;
     background-position: center;
-    background-color: green;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .hero img{
@@ -111,6 +115,15 @@ main {
   font-weight: normal;
 }
  
+ .skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
  
 /*
   restaurants
@@ -142,7 +155,7 @@ main {
 .restaurants-item .restaurants-item__header .restaurants-item__header__poster {
   width: 100%;
 }
- 
+
 .restaurants-item .restaurants-item__header .restaurants-item__header__rating {
   position: absolute;
   padding: 8px;
@@ -163,11 +176,15 @@ main {
  
 .restaurants-item .restaurants-item__content h3 {
   margin: 0 0 10px 0;
+  min-height: 44px;
+  min-width: 44px;
 }
  
 .restaurants-item .restaurants-item__content h3 a {
   color: #db0000;
   text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
 }
  
 .restaurants-item .restaurants-item__content p {
@@ -177,6 +194,7 @@ main {
   -webkit-line-clamp: 4; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+ 
  
  
 /*
@@ -195,6 +213,14 @@ main {
 .restaurants .restaurants__poster {
   width: 100%;
   max-width: 400px;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.restaurant .restaurants__poster {
+  width: 100%;
+  min-height: 44px;
+  min-width: 44px;
 }
  
 .restaurants .restaurants__info h4 {

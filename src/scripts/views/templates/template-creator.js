@@ -24,8 +24,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurants-item">
     <div class="restaurants-item__header">
-      <img class="restaurants-item__header__poster" alt="${restaurant.name}"
-           src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
+     <center> <img class="restaurants-item__header__poster" alt="${restaurant.name}"
+           src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"></center>
       
     </div>
     <div class="restaurants-item__content">
