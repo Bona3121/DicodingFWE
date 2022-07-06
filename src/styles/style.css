@@ -119,10 +119,14 @@ main {
   position: absolute;
   top: -40px;
   left: 0;
-  background-color: #bf1722;
+  background-color: #db0000;
   color: white;
   padding: 8px;
   z-index: 100;
+}
+
+.skip-link:focus {
+   top: 0;
 }
  
 /*
@@ -185,6 +189,12 @@ main {
   text-decoration: none;
   min-height: 44px;
   min-width: 44px;
+}
+
+a{
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
 }
  
 .restaurants-item .restaurants-item__content p {

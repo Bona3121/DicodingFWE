@@ -4,6 +4,7 @@ const ServiceWorkerWebpackPlugin = require("serviceworker-webpack-plugin");
 const path = require("path");
 const imagemin = require('imagemin');
 const imageminPngquant = require('imagemin-pngquant');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
  
 module.exports = {
     entry: path.resolve(__dirname, "src/scripts/index.js"),
@@ -42,6 +43,9 @@ module.exports = {
                 {
                     from: path.resolve(__dirname, "src/public/"),
                     to: path.resolve(__dirname, "dist/"),
+					globOptions: {
+					ignore: ['**/images/**'],
+					},
                 },
             ],
         }),
@@ -49,10 +53,10 @@ module.exports = {
             entry: path.resolve(__dirname, "src/scripts/sw.js"),
         }),
 		new ImageminWebpackPlugin({
-		plugins: [
-        ImageminPngquant({
-          quality: 50,
-          progressive: true,
+      plugins: [
+        imageminPngquant({
+		quality: [0.65, 0.90],
+          speed: 4
         }),
       ],
     }),

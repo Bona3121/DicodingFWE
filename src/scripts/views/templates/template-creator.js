@@ -1,8 +1,8 @@
-import CONFIG from '../../globals/config';
+import CONFIG from "../../globals/config";
  
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurants__title">${restaurant.name}</h2>
-  <img class="restaurants__poster" src="${
+  <img class="restaurants__poster lazyload" data-src="${
     CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
   <div class="restaurants__info">
   <h3>Information</h3>
@@ -12,11 +12,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <p>${restaurant.city}</p>
     <h4>Description</h4>
     <p>${restaurant.description}</p>
-	<h4>Kategori Menu :</h4>  <p> ${restaurant.categories.map((category) => category.name).join(', ')}</p>
-    <h4>Makanan :</h4>  <p>${restaurant.menus.foods.map((food) => food.name).join(', ')}</p>
-    <h4>Minuman :</h4> <p> ${restaurant.menus.drinks.map((drink) => drink.name).join(', ')}</p>
+	<h4>Kategori Menu :</h4>  <p> ${restaurant.categories.map((category) => category.name).join(", ")}</p>
+    <h4>Makanan :</h4>  <p>${restaurant.menus.foods.map((food) => food.name).join(", ")}</p>
+    <h4>Minuman :</h4> <p> ${restaurant.menus.drinks.map((drink) => drink.name).join(", ")}</p>
     <h4>Rating Restaurant:</h4>  <p>⭐️${restaurant.rating}</p>
-    <h4>Customer Reviews :</h4>  <p>${restaurant.customerReviews.map((customerReview) => customerReview.review).join(', ')}</p>
+    <h4>Customer Reviews :</h4>  <p>${restaurant.customerReviews.map((customerReview) => customerReview.review).join(", ")}</p>
   </div>
     
 `;
@@ -24,8 +24,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurants-item">
     <div class="restaurants-item__header">
-     <center> <img class="restaurants-item__header__poster" alt="${restaurant.name}"
-           src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"></center>
+     <center> <img class="restaurants-item__header__poster lazyload" alt="${restaurant.name}"
+            data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"></center>
       
     </div>
     <div class="restaurants-item__content">
@@ -50,8 +50,8 @@ const createLikedButtonTemplate = () => `
 `;
  
 export {
-  createRestaurantDetailTemplate,
-  createRestaurantItemTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+    createRestaurantDetailTemplate,
+    createRestaurantItemTemplate,
+    createLikeButtonTemplate,
+    createLikedButtonTemplate,
 };
